@@ -21,7 +21,15 @@ type Article = {
   image: string;
   paragraphs: string[];
 };
-
+export function generateStaticParams() {
+  return [
+    { slug: "a-changing-pakistan-through-the-eyes-of-its-cities" },
+    { slug: "the-stories-behind-the-headlines" },
+    { slug: "inside-the-conversations-shaping-public-life" },
+    { slug: "how-communities-are-reimagining-everyday-spaces" },
+    { slug: "memory-heritage-and-the-new-cultural-conversation" },
+  ];
+}
 const articles: Record<string, Article> = {
   "a-changing-pakistan-through-the-eyes-of-its-cities": {
     slug: "a-changing-pakistan-through-the-eyes-of-its-cities",

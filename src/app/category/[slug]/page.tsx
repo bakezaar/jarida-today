@@ -62,6 +62,11 @@ const categoryNames: Record<string, string> = {
   magazine: "Magazine",
   "special-features": "Special Features",
 };
+export function generateStaticParams() {
+  return Object.keys(categoryNames).map((slug) => ({
+    slug,
+  }));
+}
 
 const sampleStories: Story[] = [
   {
