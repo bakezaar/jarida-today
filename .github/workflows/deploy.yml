@@ -35,6 +35,8 @@ jobs:
         run: npm ci
 
       - name: Generate Prisma client
+        env:
+          DATABASE_URL: postgresql://placeholder:placeholder@localhost:5432/placeholder
         run: npx prisma generate
 
       - name: Build Next.js site
